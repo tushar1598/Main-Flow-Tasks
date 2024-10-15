@@ -1,11 +1,25 @@
-import "./App.css";
+import React, { useState } from "react";
+import TaskForm from "./TaskForm";
+import TaskList from "./TaskList";
 
-function App() {
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+  };
+
+  const deleteTask = (index) => {
+    setTasks(tasks.filter((_, i) => i !== index));
+  };
+
   return (
-    <>
-      <h1>Basic React App</h1>
-    </>
+    <div className="App">
+      <h1>To-Do List</h1>
+      <TaskForm onAddTask={addTask} />
+      <TaskList tasks={tasks} onDeleteTask={deleteTask} />
+    </div>
   );
-}
+};
 
 export default App;
