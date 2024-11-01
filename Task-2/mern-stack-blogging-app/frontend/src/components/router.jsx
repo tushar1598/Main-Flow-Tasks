@@ -12,6 +12,7 @@ import SearchResults from "./search";
 import Updatepassword from "./update-password";
 import CreateBlog from "./create-blog";
 import MyBlogs from "./my-blogs";
+import BlogDetails from "./blog-details";
 
 import {
   AuthProfile,
@@ -19,6 +20,7 @@ import {
   AuthSignUp,
   AuthCreateBlogPage,
   AuthMyBlogPage,
+  AuthMyBlogDetailsPage,
   AuthResetPasswordLink,
   AuthResetPassword,
   AuthLogOut,
@@ -72,6 +74,14 @@ export function Router() {
             <AuthMyBlogPage>
               <MyBlogs />
             </AuthMyBlogPage>
+          ),
+        },
+        {
+          path: "/users/blogs-details/:id",
+          element: (
+            <AuthMyBlogDetailsPage>
+              <BlogDetails />
+            </AuthMyBlogDetailsPage>
           ),
         },
         {

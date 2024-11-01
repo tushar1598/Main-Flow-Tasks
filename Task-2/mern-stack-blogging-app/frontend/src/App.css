@@ -1,6 +1,8 @@
 .profile-header img:hover {
-  filter: blur(1px); /* Adjust the blur value as needed */
-  transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+  filter: blur(1px);
+  /* Adjust the blur value as needed */
+  transition: filter 0.3s ease;
+  /* Smooth transition for the blur effect */
 }
 
 /* Navbar */
@@ -45,7 +47,8 @@
 }
 
 .nav-link.active-link {
-  color: #007bff; /* Style when the link is active */
+  color: #007bff;
+  /* Style when the link is active */
 }
 
 .cart-link {
@@ -53,10 +56,12 @@
   display: flex;
   align-items: center;
 }
+
 #cart {
   position: relative;
   right: 12px;
 }
+
 .cart-link img {
   width: 22px;
   height: 22px;
@@ -64,7 +69,8 @@
 
 .cart-link i {
   font-size: 18px;
-  margin-right: 10px; /* Space between icon and 'Cart' text */
+  margin-right: 10px;
+  /* Space between icon and 'Cart' text */
 }
 
 .item-count {
@@ -426,9 +432,11 @@
   width: 80%;
   margin: 40px auto;
 }
+
 #blog-child .mb-3 {
   margin: 25px auto;
 }
+
 #btn-blogs {
   margin-top: 20px;
 }
@@ -439,9 +447,11 @@
 
 #blog-fetch {
   display: grid;
-  gap: 10px; /* Space between cards */
+  gap: 10px;
+  /* Space between cards */
   margin: 40px;
-  grid-template-columns: repeat(4, 1fr); /* Default to 1 column */
+  grid-template-columns: repeat(4, 1fr);
+  /* Default to 1 column */
 }
 
 #blog-fetch .card {
@@ -451,6 +461,12 @@
 
 #blog-fetch img {
   height: 300px;
+}
+
+.card-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* Large devices: 4 cards per row */
@@ -482,3 +498,69 @@
 }
 
 /* My-Blog */
+
+/* blog-detail */
+
+#blog-detail-parent {
+  display: flex;
+  margin: 20px auto;
+  width: 80%;
+  gap: 2%;
+}
+
+#left {
+  width: 70%;
+}
+
+#right {
+  width: 28%;
+}
+
+.blog-detail {
+  width: 90%;
+  margin: auto;
+}
+
+.blog-detail img {
+  width: 500px;
+  height: 400px;
+}
+
+#leave-comments {
+  position: fixed;
+  padding: 20px;
+}
+
+#leave-comments input,
+#leave-comments textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  #blog-detail-parent {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    gap: 2%;
+  }
+  #leave-comments {
+    position: static;
+    padding: 20px;
+  }
+  #left {
+    width: 100%;
+  }
+  #right {
+    width: 70%;
+    margin: auto;
+  }
+  .blog-detail img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* blog-detail */

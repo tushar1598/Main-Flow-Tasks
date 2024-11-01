@@ -16,5 +16,6 @@ router.post("/update-profile", userController.Editprofile);
 router.put("/update-profile-photo/:id", upload, userController.Profilephoto);
 router.post("/create-blog", Blogupload, userController.Createblog);
 router.get("/fetch-blog", userController.FetchBlogs);
+router.get("/fetch-blog-details", userController.fetchBlogDetails);
 
 module.exports = router;

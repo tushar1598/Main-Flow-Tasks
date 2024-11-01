@@ -61,3 +61,8 @@ export function AuthMyBlogPage({ children }) {
   if (authLoading) return null;
   return data ? children : <Navigate to="/users/sign-in" />;
 }
+export function AuthMyBlogDetailsPage({ children }) {
+  const { data, authLoading } = useContext(UserContext);
+  if (authLoading) return null;
+  return data ? children : <Navigate to="/users/sign-in" />;
+}

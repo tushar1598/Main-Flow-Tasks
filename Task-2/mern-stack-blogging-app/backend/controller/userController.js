@@ -201,3 +201,11 @@ module.exports.FetchBlogs = async function (req, res) {
     output: blogs,
   });
 };
+
+module.exports.fetchBlogDetails = async function (req, res) {
+  const { id } = req.query;
+  const blog = await Blog.findById(id);
+  return res.status(200).json({
+    blog,
+  });
+};

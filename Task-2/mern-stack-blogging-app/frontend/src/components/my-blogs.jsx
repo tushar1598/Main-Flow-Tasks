@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { UserContext } from "../contexts/usercontext";
+import { Link } from "react-router-dom";
 
 function MyBlogs() {
   const { data } = useContext(UserContext);
@@ -31,9 +32,12 @@ function MyBlogs() {
               <div className="card-body">
                 <h5 className="card-title">{e.title}</h5>
                 <p className="card-text">{e.content}</p>
-                <a href="/" className="btn btn-primary">
+                <Link
+                  to={`/users/blogs-details/${e._id}`}
+                  className="btn btn-primary"
+                >
                   Go somewhere
-                </a>
+                </Link>
               </div>
             </div>
           </React.Fragment>
