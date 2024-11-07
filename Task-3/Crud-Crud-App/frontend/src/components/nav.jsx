@@ -12,7 +12,7 @@ function Nav() {
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link style={{ textDecoration: "none" }} to="/">
-            <h4 id="nav-head">Placement Cell</h4>
+            <h4 id="nav-head">Expense Tracker</h4>
           </Link>
           <button
             className="navbar-toggler"
